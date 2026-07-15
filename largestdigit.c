@@ -7,7 +7,7 @@ int main(int argc, char const *argv[])
     scanf("%lld",&a);
 
     int digit;
-    int smallestdigit;
+    int largestdigit;
     long long int digits;
     copy1=a;
     copy2=a;
@@ -19,26 +19,26 @@ int main(int argc, char const *argv[])
         copy1=copy1/10;
     } while (copy1>0);
     
-    smallestdigit=copy2%10;
+    largestdigit=copy2%10;
 
     for (int i =1; i < digits; i++)
     {
         copy2=copy2/10;
          digit=copy2%10;
 
-        if (smallestdigit<digit)
+        if (largestdigit>digit)
         {
-            smallestdigit=smallestdigit;
+            largesttdigit=largestdigit;
         }
         else{
-            smallestdigit=digit;
+            largestdigit=digit;
         }
         
         
 
     }
     
-    printf("%d",smallestdigit);
+    printf("%d",largestdigit);
 
 
     return 0;
